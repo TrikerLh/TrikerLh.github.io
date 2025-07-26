@@ -83,8 +83,27 @@ header {
   }
 }
 @media (max-width: 600px) {
+  .main-nav {
+    position: static;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    z-index: 101;
+  }
   .main-nav ul {
     flex-direction: column;
+    display: none;
+    background: #1e88e5;
+    position: static;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    z-index: 100;
+  }
+  .main-nav ul.open {
+    display: flex;
   }
   .main-nav li {
     margin: 0.5em 0;
@@ -344,5 +363,50 @@ main {
   }
   .final-container {
     margin: 2em 0 0 0;
+  }
+}
+
+/* Estilos menú hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+  z-index: 101;
+}
+@media (max-width: 600px) {
+  .main-nav {
+    position: static;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    z-index: 101;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    display: none;
+    background: #1e88e5;
+    position: static;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    z-index: 100;
+  }
+  .main-nav ul.open {
+    display: flex;
+  }
+  .main-nav li {
+    margin: 0.5em 0;
+  }
+  .header-img {
+    max-height: 120px;
   }
 }
