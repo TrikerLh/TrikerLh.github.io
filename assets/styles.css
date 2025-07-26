@@ -87,7 +87,7 @@ header {
     position: static;
   }
   .menu-toggle {
-    display: block;
+    display: block !important;
     position: absolute;
     right: 1em;
     top: 0.5em;
@@ -369,33 +369,33 @@ main {
 /* Estilos menú hamburguesa */
 .menu-toggle {
   display: none;
-  background: none;
+  background: #1e88e5;
   border: none;
   color: #fff;
   font-size: 2em;
   padding: 0.5em 1em;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   right: 1em;
-  top: 0.5em;
-  z-index: 101;
+  top: 1em;
+  z-index: 9999;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 @media (max-width: 600px) {
   .main-nav {
-    position: static;
+    position: relative;
   }
   .menu-toggle {
     display: block;
-    position: absolute;
-    right: 1em;
-    top: 0.5em;
-    z-index: 101;
   }
   .main-nav ul {
     flex-direction: column;
     display: none;
     background: #1e88e5;
-    position: static;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     z-index: 100;
