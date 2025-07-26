@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuadro de Cruces - Torneo de Pádel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/header.jpg" alt="Torneo de Pádel" class="header-img">
+    <div id="menu-container"></div>
+  </header>
+  <main>
+    <h2>Cuadro de Cruces</h2>
+    <div class="bracket bracket-visual">
+      <div class="round round-cuartos">
+        <h3>Cuartos de Final</h3>
+        <div class="match" id="cuartos1">
+          <div class="match-info"><span class="fecha">28/07/2025</span> <span class="hora">17:00</span></div>
+          <div class="teams"><span>Pareja 1</span><span>Pareja 8</span></div>
+          <div class="resultado">6-2, 6-4</div>
+        </div>
+        <div class="match" id="cuartos2">
+          <div class="match-info"><span class="fecha">28/07/2025</span> <span class="hora">18:00</span></div>
+          <div class="teams"><span>Pareja 4</span><span>Pareja 5</span></div>
+          <div class="resultado">4-6, 6-3, 7-6</div>
+        </div>
+        <div class="match" id="cuartos3">
+          <div class="match-info"><span class="fecha">28/07/2025</span> <span class="hora">19:00</span></div>
+          <div class="teams"><span>Pareja 2</span><span>Pareja 7</span></div>
+          <div class="resultado">6-3, 6-2</div>
+        </div>
+        <div class="match" id="cuartos4">
+          <div class="match-info"><span class="fecha">28/07/2025</span> <span class="hora">20:00</span></div>
+          <div class="teams"><span>Pareja 3</span><span>Pareja 6</span></div>
+          <div class="resultado">6-4, 6-4</div>
+        </div>
+      </div>
+      <div class="round round-semifinales">
+        <h3>Semifinales</h3>
+        <div style="margin-top: 5em;"></div>
+        <div class="match" id="semi1" style="margin-bottom: 8em;">
+          <div class="match-info"><span class="fecha">29/07/2025</span> <span class="hora">18:00</span></div>
+          <div class="teams"><span>Pareja 1</span><span>Pareja 4</span></div>
+          <div class="resultado">6-3, 6-2</div>
+        </div>
+        <div class="match" id="semi2" style="margin-top: 8em;">
+          <div class="match-info"><span class="fecha">29/07/2025</span> <span class="hora">20:00</span></div>
+          <div class="teams"><span>Pareja 2</span><span>Pareja 3</span></div>
+          <div class="resultado">7-5, 6-4</div>
+        </div>
+      </div>
+      <div class="round round-final" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h3 style="text-align:center;">Final</h3>
+        <div class="match" id="final" style="margin: 12em auto 0 auto;">
+          <div class="match-info"><span class="fecha">30/07/2025</span> <span class="hora">20:00</span></div>
+          <div class="teams"><span>Pareja 1</span><span>Pareja 2</span></div>
+          <div class="resultado">Pendiente</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="assets/menu.js"></script>
+</body>
+</html>

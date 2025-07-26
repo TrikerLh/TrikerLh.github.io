@@ -1,0 +1,348 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.main-nav {
+  background: #1e88e5;
+}
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+.main-nav li {
+  margin: 0 1em;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1em 0.5em;
+  display: block;
+  transition: background 0.2s;
+}
+.main-nav a:hover {
+  background: #1565c0;
+}
+
+/* Submenú de grupos */
+.submenu {
+  position: relative;
+}
+.submenu .subnav {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #1976d2;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 0 0 8px 8px;
+  z-index: 10;
+}
+.submenu:hover .subnav,
+.submenu:focus-within .subnav {
+  display: block;
+}
+.subnav li {
+  margin: 0;
+}
+.subnav a {
+  padding: 0.75em 1em;
+  color: #fff;
+  background: none;
+  font-weight: 400;
+}
+.subnav a:hover {
+  background: #1565c0;
+}
+@media (max-width: 600px) {
+  .submenu .subnav {
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+@media (max-width: 600px) {
+  .main-nav ul {
+    flex-direction: column;
+  }
+  .main-nav li {
+    margin: 0.5em 0;
+  }
+  .header-img {
+    max-height: 120px;
+  }
+}
+main {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 1em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.bienvenida {
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* Tabla de partidos y clasificación */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  background: #fafafa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.table th, .table td {
+  padding: 0.75em 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+.table th {
+  background: #1e88e5;
+  color: #fff;
+  font-weight: 600;
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+.table tbody tr:hover {
+  background: #e3f2fd;
+}
+@media (max-width: 600px) {
+  .table th, .table td {
+    padding: 0.5em 0.2em;
+    font-size: 0.95em;
+  }
+}
+
+/* Estilos para cuadro de cruces tipo bracket */
+.bracket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  margin: 2em 0;
+}
+.round {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+}
+.round h3 {
+  margin-bottom: 1em;
+  color: #1976d2;
+  font-size: 1.1em;
+}
+.match {
+  background: #fff;
+  border: 2px solid #1e88e5;
+  border-radius: 8px;
+  margin: 1em 0;
+  padding: 1em;
+  min-width: 160px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(30,136,229,0.07);
+}
+.match-info {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 0.5em;
+}
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+.resultado {
+  font-size: 1em;
+  color: #1976d2;
+  font-weight: 600;
+}
+/* Líneas visuales entre rondas */
+.round-cuartos .match::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -2em;
+  top: 50%;
+  width: 2em;
+  height: 2px;
+  background: #1976d2;
+}
+.round-semifinales .match::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -2em;
+  top: 50%;
+  width: 2em;
+  height: 2px;
+  background: #1976d2;
+}
+@media (max-width: 900px) {
+  .bracket {
+    flex-direction: column;
+    gap: 1em;
+    align-items: stretch;
+  }
+  .round {
+    min-width: 0;
+  }
+}
+
+/* Bracket visual mejorado */
+.bracket-visual {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4em;
+  margin: 2em 0;
+}
+.round {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+  position: relative;
+}
+.round h3 {
+  margin-bottom: 1em;
+  color: #1976d2;
+  font-size: 1.1em;
+}
+.match {
+  background: #fff;
+  border: 2px solid #1e88e5;
+  border-radius: 8px;
+  margin: 2em 0;
+  padding: 1em;
+  min-width: 160px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(30,136,229,0.07);
+}
+.match-info {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 0.5em;
+}
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+.resultado {
+  font-size: 1em;
+  color: #1976d2;
+  font-weight: 600;
+}
+/* Líneas visuales entre rondas */
+/* Cuartos a Semis */
+#cuartos1::after, #cuartos2::after {
+  content: '';
+  position: absolute;
+  right: -2em;
+  top: 50%;
+  width: 2em;
+  height: 2px;
+  background: #1976d2;
+}
+#cuartos3::after, #cuartos4::after {
+  content: '';
+  position: absolute;
+  right: -2em;
+  top: 50%;
+  width: 2em;
+  height: 2px;
+  background: #1976d2;
+}
+/* Semis a Final */
+#semi1::after, #semi2::after {
+  content: '';
+  position: absolute;
+  right: -2em;
+  top: 50%;
+  width: 2em;
+  height: 2px;
+  background: #1976d2;
+}
+/* Final centrada */
+.round-final {
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .bracket-visual {
+    flex-direction: column;
+    gap: 1em;
+    align-items: stretch;
+  }
+  .round {
+    min-width: 0;
+  }
+  .match {
+    margin: 1em 0;
+  }
+}
+
+/* Estilos adicionales para alinear semifinales y finales */
+.cuartos-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 2em;
+}
+.semifinal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0 0 0;
+}
+.final-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4em 0 0 0;
+}
+.round-final {
+  width: 100%;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .cuartos-group {
+    margin: 0 0.5em;
+  }
+  .final-container {
+    margin: 2em 0 0 0;
+  }
+}
